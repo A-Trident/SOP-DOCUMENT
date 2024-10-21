@@ -9,7 +9,7 @@
         body {
             background-color: #f8f9fa;
         }
-        .container {
+        .container-fluid {
             margin-top: 50px;
             padding: 0 15px; /* Added padding to container */
         }
@@ -69,13 +69,20 @@
 
             if (categorySelect.value === "category_Security") {
                 pdfSelect.innerHTML += `
-                    <option value="1">Sample PDF 1</option>
-                    <option value="2">Create SAP Fiori Spaces and Pages</option>`;
+                    <option value="S1">Create SAP Fiori Spaces and Pages</option>
+                    <option value="S2">Fiori Configuration Process</option>
+                    <option value="S3">To find a Table behind a Transaction Code</option>
+                    <option value="S4">SAP Background Job Processing SM36 - Create, Schedule, Reschedule</option>
+                    <option value="S5">Security Recommendations (A Practical Guide for Securing SAP® Solutions)</option>`;
                 pdfDropdown.style.display = "block"; // Show PDF dropdown
             } else if (categorySelect.value === "category_GRC") {
                 pdfSelect.innerHTML += `
-                    <option value="3">ENABLE AUDIT LOG & CHANGE LOG IN SAP IAG</option>
-                    <option value="4">Full File</option>`;
+                    <option value="G1">ENABLE AUDIT LOG & CHANGE LOG IN SAP IAG</option>
+                    <option value="G2">S4Hana Global Setting</option>
+                    <option value="G3">SAP Cloud Identity and Access Governance (IAG)</option>
+                    <option value="G4">SAP IAG CHANGE MANAGEMENT</option>
+                    <option value="G5">SAP Implementation Project</option>
+                    <option value="G6">Using SCIM in SAP IAG</option>`;
                 pdfDropdown.style.display = "block"; // Show PDF dropdown
             } else {
                 pdfDropdown.style.display = "none"; // Hide PDF dropdown
@@ -91,14 +98,28 @@
             var pdfUrl = "";
 
             // Set Google Drive view URLs based on selection
-            if (selectedValue == "1") {
-                pdfUrl = "https://drive.google.com/file/d/1d-SEYyxRqeJW5rZKTd3EB42hQvbzjucV/preview";
-            } else if (selectedValue == "2") {
-                pdfUrl = "https://drive.google.com/file/d/1-XEcG2RH5AfVn10Nz6XVqJ5ObFpZz9xj/preview";
-            } else if (selectedValue == "3") {
-                pdfUrl = "https://drive.google.com/file/d/1-AMdggBH2h3VFPgUQuseDF-xGToVsjRa/preview";
-            } else if (selectedValue == "4") {
-                pdfUrl = "https://drive.google.com/drive/folders/1cyNxgrdVl8ReZuwha1TH0PutcFHOkNQI/preview";
+            if (selectedValue == "S1") {
+                pdfUrl = "https://drive.google.com/file/d/1-XEcG2RH5AfVn10Nz6XVqJ5ObFpZz9xj/preview"; // Create SAP Fiori Spaces and Pages
+            } else if (selectedValue == "S2") {
+                pdfUrl = "https://drive.google.com/file/d/1-IzCZQscBAcXVPbO6ho_wzOBir9-LMQH/preview"; // Fiori Configuration Process
+            } else if (selectedValue == "S3") {
+                pdfUrl = "https://drive.google.com/file/d/1-FjMHzKqtFp1-FpyDYv-kqhDBHeFrk5E/preview"; // To find a Table behind a Transaction Code
+            } else if (selectedValue == "S4") {
+                pdfUrl = "https://drive.google.com/file/d/1-EW7lEksjYJHAAopcpaD5hYtP1J8cUzO/preview"; // SAP Background Job Processing SM36
+            } else if (selectedValue == "S5") {
+                pdfUrl = "https://drive.google.com/file/d/1d-SEYyxRqeJW5rZKTd3EB42hQvbzjucV/preview"; // Security Recommendations
+            } else if (selectedValue == "G1") {
+                pdfUrl = "https://drive.google.com/file/d/1-AMdggBH2h3VFPgUQuseDF-xGToVsjRa/preview"; // ENABLE AUDIT LOG & CHANGE LOG IN SAP IAG
+            } else if (selectedValue == "G2") {
+                pdfUrl = "https://drive.google.com/file/d/1QqSugEPVD5BHwXysfxw1L2Uwjnzj1MHg/preview"; // S4Hana Global Setting
+            } else if (selectedValue == "G3") {
+                pdfUrl = "https://drive.google.com/file/d/1-6ALOdIkC3BuWGjEpW8OVBSiaiTpLIX1/preview"; // SAP Cloud Identity and Access Governance (IAG)
+            } else if (selectedValue == "G4") {
+                pdfUrl = "https://drive.google.com/file/d/1-3jxvk_lwYDZiqpa68nJvTpXCnpseWPW/preview"; // SAP IAG CHANGE MANAGEMENT
+            } else if (selectedValue == "G5") {
+                pdfUrl = "https://drive.google.com/file/d/1-VXwHV3D-2KVR8CDno8nJ8cbNJ_AplWz/preview"; // SAP Implementation Project
+            } else if (selectedValue == "G6") {
+                pdfUrl = "https://drive.google.com/file/d/1-2nI8SMyjlIGf5jOl6qd3J_DEwcC0jPE/preview"; // Using SCIM in SAP IAG
             } else {
                 pdfViewer.style.display = "none"; // Hide iframe if no valid selection
                 return;
